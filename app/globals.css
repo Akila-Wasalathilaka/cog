@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  .hover\\:pause-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes neuralPulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes dataFlow {
+    0% {
+      transform: translateX(-100px) translateY(-100px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100px) translateY(100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes brainWave {
+    0% {
+      transform: scaleX(0) scaleY(1);
+      opacity: 0;
+    }
+    50% {
+      transform: scaleX(1) scaleY(1.2);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scaleX(0) scaleY(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes synapticSpark {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+
+  @keyframes cognitiveFlow {
+    0% {
+      transform: translateX(-50px) rotate(0deg);
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.7;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(50px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .animate-neural-pulse {
+    animation: neuralPulse 4s ease-in-out infinite;
+  }
+
+  .animate-data-flow {
+    animation: dataFlow 8s linear infinite;
+  }
+
+  .animate-brain-wave {
+    animation: brainWave 6s ease-in-out infinite;
+  }
+
+  .animate-synaptic-spark {
+    animation: synapticSpark 3s ease-in-out infinite;
+  }
+
+  .animate-cognitive-flow {
+    animation: cognitiveFlow 10s linear infinite;
+  }
+}
